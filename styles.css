@@ -20,6 +20,8 @@ a{
     color: inherit;
 }
 nav{
+    width: 100%;
+    
     position: sticky;
     border: 0.01rem solid black;
     margin-bottom:0.5rem;
@@ -62,3 +64,36 @@ nav img{
 /* End of navbar */
 /* Start of Intro page */
 
+.intro{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 0.5rem 1rem 0.5rem 1rem; 
+    flex-wrap: nowrap;
+}
+.intro article{
+    max-width: 40%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    border: 0rem solid black; 
+    width: fit-content;
+    padding-right: 1rem;
+}
+.intro h1{
+    font-family: 'Bangers', cursive;
+    font-size: 5rem; 
+    color: darkgreen;
+}
+.intro p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    text-align: justify;
+}
+.intro aside{
+    flex: 1 0 70rem; 
+    border: 0rem solid black; 
+}
+aside img{
+    width: 100%;
+    border-radius: 1rem;
+}
