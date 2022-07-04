@@ -234,3 +234,51 @@ aside img{
 /* End of Recommendation section */
 /* Start of Reviews section */
 
+.revCardrow{
+    display: flex; 
+    flex-flow: row wrap; 
+    justify-content: space-between;
+    margin: auto;  
+    max-width: 95%;
+    padding: 0.5rem 1rem 0.5rem 1 rem;
+}
+.revCard{
+    display: flex;
+    flex-flow: column;
+    border: 0rem solid black; 
+    max-width: 33%;
+    min-height: 30rem;
+}
+.revCard:hover{
+    border: 0.1rem dashed darkgoldenrod;
+    background-color: rgba(255, 235, 205, 0.5);
+    border-radius: 2rem;
+}
+.revCardtitle{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    font-family: 'Trispace', sans-serif;
+    font-size: 3rem;
+    padding: 1rem 0.5rem 0.75rem 0.5rem; 
+    border: 0.2rem; 
+}
+.revCard > img{
+    max-width: 70%;
+    align-self: center;
+    border-radius: 2rem;
+    transition: max-width 0.8s; 
+}
+.revCard > img:hover{
+    max-width: 75%; 
+    
+}
+.revCard > article{
+    align-self: center;
+    padding: 1rem 0.5rem 0.75rem 0.5rem; 
+    border: 0.2rem; 
+    font-family: 'Trispace', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
