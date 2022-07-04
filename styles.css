@@ -136,9 +136,14 @@ aside img{
 .bsbCard{
     display: flex;
     flex-flow: column;
-    border: 0.1rem solid black; 
+    border: 0rem solid black; 
     max-width: 45%;
     min-height: 30rem;
+}
+.bsbCard:hover{
+    border: 0.1rem dashed darkgoldenrod;
+    background-color: blanchedalmond;
+    border-radius: 2rem;
 }
 .bsbCardtitle{
     display: flex;
@@ -152,7 +157,6 @@ aside img{
 }
 .bsbCard > img{
     max-width: 40%;
-    z-index: -1;
     align-self: center;
 }
 .bsbCard > article{
@@ -173,11 +177,58 @@ aside img{
      
 }
 .bsbCardbutton > button{
-    background-color: #4caf50;
+    background-image: url("add_plus.png");
     font-family: 'Trispace', sans-serif;
-    font-size: 4rem; 
+    font-size: 4.5rem; 
     width:20rem; 
-    height:4rem;
+    height:5rem;
     margin-bottom: 0.5rem;
-    padding: 0.1rem 0.2rem 0.1rem 0.2rem; 
+    padding: 0.1rem 0.2rem 0.5rem 0.2rem; 
+    
 }
+.bsbCardbutton > button:focus{
+    background-image: url("added.png"); 
+}
+
+/* End of bsb section will be reused agin tho*/
+/* start of reco*/
+
+
+.searchBar{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.searchBar input{
+    height: 3.5rem;
+    width: 35rem;
+    background-color: lightcyan;
+    padding:0.2rem 0.1rem 0.2rem 0.1rem;
+    border-radius: 1rem;
+    font-family: 'Trispace', sans-serif;
+    font-size: 2.75rem;
+    transition: width 0.75s;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght'400,
+    'GRAD' 0,
+    'opsz' 48;
+      padding: 0.3rem;
+      margin: 0.2rem 0.1rem 0.2rem 0.1rem; 
+    align-items: baseline;  
+}
+.searchBar input:hover{
+    border:0.1rem dotted lightskyblue;
+}
+.searchBar input:focus-visible{
+    background-color: aliceblue;
+    color: blue;
+    width: 60rem;
+}
+/* End of Recommendation section */
+/* Start of Reviews section */
+
