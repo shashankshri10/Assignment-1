@@ -138,9 +138,11 @@ aside img{
 .bsbCard{
     display: flex;
     flex-flow: column;
-    border: 0rem solid black; 
+    border: 0rem dashes black; 
+    border-radius: 2rem;
     max-width: 45%;
     min-height: 30rem;
+    transition: border 0.5s;
 }
 .bsbCard:hover{
     border: 0.1rem dashed darkgoldenrod;
@@ -160,6 +162,13 @@ aside img{
 .bsbCard > img{
     max-width: 40%;
     align-self: center;
+    border-radius: 0rem;
+    
+    transition: border-radius 0.5s; 
+}
+.bsbCard > img:hover{
+    
+    border-radius: 1rem;
 }
 .bsbCard > article{
     align-self: center;
@@ -282,3 +291,6 @@ aside img{
     font-size: 2rem;
     text-align: center;
 }
+/*End of review part1*/
+/*Start of review part2*/
+
