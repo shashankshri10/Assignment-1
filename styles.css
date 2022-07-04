@@ -72,7 +72,7 @@ nav img{
     flex-wrap: nowrap;
 }
 .intro article{
-    max-width: 40%;
+    max-width: 50%;
     flex-grow: 1;
     flex-shrink: 0;
     border: 0rem solid black; 
@@ -80,9 +80,14 @@ nav img{
     padding-right: 1rem;
 }
 .intro h1{
-    font-family: 'Bangers', cursive;
-    font-size: 5rem; 
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 8rem; 
     color: darkgreen;
+}
+.intro h2{
+    font-family: 'IM Fell English SC',serif;
+    font-size: 6rem;
+    color: green;
 }
 .intro p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -94,6 +99,28 @@ nav img{
     border: 0rem solid black; 
 }
 aside img{
-    width: 100%;
+    width:100%; 
     border-radius: 1rem;
 }
+.homeBut{
+    display: flex;
+    justify-content: center;
+}
+.intro button{
+    margin-top: auto;
+    border-radius: 2rem;
+    background-color: #4caf50;
+    color: gainsboro;
+    font-family: 'Cinzel Decorative',cursive;
+    font-size: 4rem; 
+    width: 30rem; 
+    height: 15rem; 
+}
+.intro button:hover{
+    background-color: #2caa25;
+    color: beige;
+    cursor: pointer;
+}
+/* End of intro section */
+/* Start of best selling books */
+
