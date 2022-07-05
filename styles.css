@@ -19,12 +19,21 @@ h2{
     font-size: 6rem;
     color: green;
 }
+@media screen and (max-width: 740px) {
+    h1{
+        font-size: 10vw; 
+    }
+    h2{
+        font-size: 9vw; 
+    }
+}
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
     background-image: url("background1.png");
+    
 }
 a{
     text-decoration: none;
@@ -82,15 +91,27 @@ nav img{
     margin: auto;
     padding: 0.5rem 1rem 0.5rem 1rem; 
     flex-wrap: wrap;
-    
+    justify-content: center;
 }
 .intro article{
-    max-width: 50%;
     flex-grow: 1;
     flex-shrink: 0;
     border: 0rem solid black; 
     width: fit-content;
     padding-right: 1rem;
+}
+@media screen and (max-width: 1419px) {
+    .intro{
+        justify-content: center;
+    }
+    .intro article{
+        width: 100%; 
+    }
+}
+@media screen and (min-width: 1420px) {
+    .intro article{
+        width: 50%;
+    }
 }
 .intro p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -100,10 +121,16 @@ nav img{
 .intro aside{
     flex: 1 0 70rem; 
     border: 0rem solid black; 
+    min-width: 50%;
+    max-width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-content: center;
 }
 aside img{
     width:100%; 
     border-radius: 1rem;
+    
 }
 .homeBut{
     display: flex;
@@ -111,6 +138,7 @@ aside img{
 }
 .intro button{
     margin-top: auto;
+    margin-bottom: 2rem;
     border-radius: 2rem;
     background-color: #4caf50;
     color: gainsboro;
@@ -134,15 +162,22 @@ aside img{
     margin: auto;  
     max-width: 95%;
     padding: 0.5rem 1rem 0.5rem 1 rem;
+    
 }
 .bsbCard{
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     border: 0rem dashes black; 
     border-radius: 2rem;
     max-width: 45%;
     min-height: 30rem;
     transition: border 0.5s;
+    margin: 0.5rem; 
+}
+@media screen and (max-width: 600px) {
+    .bsbCard{
+        max-width: 100%;
+    }
 }
 .bsbCard:hover{
     border: 0.1rem dashed darkgoldenrod;
@@ -181,10 +216,10 @@ aside img{
 
 
 .bsbCardbutton{
-    
+    justify-self: auto;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-content: flex-end;
      
 }
 .bsbCardbutton > button{
@@ -251,12 +286,31 @@ aside img{
     max-width: 95%;
     padding: 0.5rem 1rem 0.5rem 1 rem;
 }
+
 .revCard{
     display: flex;
     flex-flow: column;
     border: 0rem solid black; 
-    max-width: 33%;
+    
     min-height: 30rem;
+}
+@media screen and (max-width: 832px) {
+    .revCardrow{
+        justify-content: center;
+    }
+    .revCard{
+        max-width: 95%;
+    }
+}
+@media screen and (min-width: 832px) and (max-width: 1261px) {
+    .revCard{
+        max-width: 50%;
+    }
+}
+@media screen and (min-width: 1261px) {
+    .revCard{
+        max-width: 33%;
+    }
 }
 .revCard:hover{
     border: 0.1rem dashed darkgoldenrod;
@@ -264,10 +318,6 @@ aside img{
     border-radius: 2rem;
 }
 .revCardtitle{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: nowrap;
     font-family: 'Trispace', sans-serif;
     font-size: 3rem;
     padding: 1rem 0.5rem 0.75rem 0.5rem; 
@@ -309,4 +359,82 @@ aside img{
     background-color: #2caa25;
     color: beige;
     cursor: pointer;
+}
+/* End of Review section */
+/* Start of footer section */
+
+.footer{
+    display: flex;
+    flex-flow: column nowrap; 
+    background-color: rgba(211,211,211,0.6);
+    z-index: 98;
+    height: 12vh; 
+    border: 0.1rem solid black; 
+    margin-bottom: 0rem;
+}
+.footerRow1{
+    flex-grow: 2; 
+    align-items: center; /* this align for flex column of .footer */
+    border-bottom: 0.1rem solid rgba(100,100,100,0.6); 
+    
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    
+}
+.tw{
+    flex-grow: 1;
+    border: 0rem solid black;
+    padding-right: 1%;
+}
+.fb{
+    flex-grow: 1; 
+    border: 0rem solid black;
+    padding-right: 1%;
+}
+.insta{
+    flex-grow: 1; 
+    border: 0rem solid black;
+    padding-right: 1%;
+}
+.btp{
+    flex-grow: 3; 
+    border: 0rem solid black;
+    display: flex;
+    justify-content: center;
+}
+.btp button{
+    align-content: center;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2rem;
+    background-color: rgba(169,169,169,0.5);
+    color: darkolivegreen; 
+    height: 3rem; 
+    width: 20rem; 
+    border-radius: 1rem;
+    border: 0.1rem solid rgba(169,169,169,0.5) ;
+    transition: width 0.5s;
+}
+.btp button:hover{
+    background-color: rgba(250,250,250,0.4);
+    color: #2caa25;
+    width: 24rem;
+}
+#socialIcon img{
+    width: 48px; 
+    transition: width 0.2s;
+}
+#socialIcon img:hover{
+    width: 52px; 
+}
+.footerRow2{
+    flex-grow: 1; 
+    border: 0rem solid black;
+    align-items: center; 
+}
+.footerRow2 p{
+    
+    padding: 0.1rem 0rem 0.1rem 1rem; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
 }
